@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 import django_heroku
+from whitenoise.django import DjangoWhiteNoise
+from django.core.wsgi import get_wsgi_application
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,6 +124,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/img/'
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, './main/static/main/img')

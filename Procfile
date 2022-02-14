@@ -1,1 +1,1 @@
-web: gunicorn eurofix.wsgi
+web: gunicorn eurofix.wsgi  --log-file
