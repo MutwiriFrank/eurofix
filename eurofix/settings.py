@@ -1,7 +1,6 @@
 from pathlib import Path
 import os
 import django_heroku
-from whitenoise.django import DjangoWhiteNoise
 from django.core.wsgi import get_wsgi_application
 import dj_database_url
 
