@@ -3,6 +3,7 @@ import os
 import django_heroku
 from whitenoise.django import DjangoWhiteNoise
 from django.core.wsgi import get_wsgi_application
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,9 +16,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3!&7pf$7%nn6jb0=w*37xa#n#f3uo0qxnz1xur@f9bt5xga@7s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://eurofix-website.herokuapp.com/", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -47,7 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ]
 
 ROOT_URLCONF = 'eurofix.urls'
 
@@ -73,10 +75,16 @@ WSGI_APPLICATION = 'eurofix.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ciba',
     }
 }
 
@@ -125,8 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 MEDIA_URL = '/img/'
 
-STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, './main/static/main/img')
 
