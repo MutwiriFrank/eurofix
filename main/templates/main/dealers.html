@@ -1,0 +1,44 @@
+{% extends "./base.html" %}  
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container filter-container " >
+    <div class="row">
+    <form method="get" action="{% url 'dealers' %}" >
+            {{ myfilter.form |crispy }}
+            <button class='btn filter-btn'  style='background-color: yellow; border: rgb(194, 197, 15) 2px solid; margin-left: 3rem;'  type='submit' >Search</button>
+
+        </form>
+
+        
+        <table class="table table-striped dealers-table">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Company / Hardware</th>
+                <th scope="col">Phone number</th>
+                <th scope="col">Location</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                {% for dealer in dealers %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{  dealer.hardware_name }}</td>
+                        <td>0{{  dealer.phone_number }}</td>
+                        <td>{{ dealer.location }}</td>
+                    </tr>
+                {% endfor %}
+            
+            </tbody>
+          </table>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

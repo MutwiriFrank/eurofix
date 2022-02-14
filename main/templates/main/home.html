@@ -1,0 +1,245 @@
+
+{% extends "./base.html" %}  
+{% load static %}
+
+{% block content %}
+<div class=" first-vh">
+
+
+    <div class="box">
+        <img src = {% static 'main/img/hero.jpg' %} alt="Tile cements">
+
+        <p class='hero-text'>3X Bonding Strength</p>
+    </div> 
+    <div class="pillars">
+        <p class="strategic-pillars">Our Strategic Pillars</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%" src={% static 'main/img/laying-white-Tile.jpg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Tile Cements </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%" src={% static 'main/img/water-tank.jpg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Waterproofing </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%" src={% static 'main/img/yellow-wall.jpeg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Finishing & Decorations </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%" src={% static 'main/img/cement.jpg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Ready to Use Cement </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%" src={% static 'main/img/blocks.jpg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Cabros & Blocks </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
+                <img style="max-width: 100%; height: inherit" src={% static 'main/img/construction_chemicals.jpg' %} class="" alt="...">
+                <div >
+                    <p class="card-text">Construction Chemicals </p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<div class="container second-vh">
+    <div class="row about-row">
+        <div class='col-md-12 col-lg-6 parent'>
+            <div class="child">
+                <button type="button" class="btn btn-lg" style="background-color: yellow"><p class="about-us-btn-text">About Us</p></button>
+                <div class="about-us-text-div">
+                    <p>Euroﬁx industries is a leading manufacturing company
+                        in innovative and sustainable building solutions.
+                        We are passionate about construction across six segments.
+                        Solutions for Tile Applications, Waterprooﬁng, Fnishing Products, Ready to use cement, Concrete Bricks,
+                        Cabro and Construction Chemicals.
+
+                    </p>
+                    <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+            </div>
+        
+        </div>
+        <div class=' col-md-12 col-lg-6 parent'>
+            <div class="company-image child" >
+                <img src={% static 'main/img/company-image.jpg' %} />
+                
+            </div>
+        
+        </div>
+
+    </div>
+
+</div>
+<div class ="container-fluid third-vh" >
+    <div class="sustainability" >
+        
+        <img src={% static 'main/img/forest.jpg' %} />
+        <div >
+            <p> At Eurofix we are driven to ensure a greener environment by reducing polution or eliminating negative impacts,
+                and creating positive impacts on our climate and natural environment as we work towards becoming a net zero company.
+    
+            </p>
+
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="outer-fourth" >
+<div class ="container fourth-vh" >
+    <div class="row big-cards-row" >       
+        <div class="col-12 col-md-6  big-cards" >
+            <div class="big-cards-image-wrap" >
+                <img class="big-cards-image" style="max-width: 100%" src={% static 'main/img/eurofix-products.jpg' %} class="" alt="...">
+            </div>
+            <div class=" big-cards-text-div ">
+                <p class="big-cards-text-title"> 15 Products </p>
+                <!-- <p class="big-cards-text" >Discover all our products for all kinds of construction needs</p> -->
+
+                <Button class="btn " style="background-color: yellow">View Products</Button>
+                
+            </div>       
+        </div>
+
+        <div class="col-12 col-md-6 big-cards" >
+            <div class="big-cards-image-wrap" >
+                <img class="big-cards-image" style="max-width: 100%" src={% static 'main/img/distributors.jpg' %} class="" alt="...">
+            </div>
+            <div class=" big-cards-text-div ">
+                <p class="big-cards-text-title"> Dealers </p>
+                <!-- <p class="big-cards-text">We have a large dealer netork covering nationalwide</p> -->
+                <button class="btn  big-cards-button" style="background-color: yellow ">View Dealers</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6  big-cards" >
+            <div class="big-cards-image-wrap" >
+                <img class="big-cards-image" style="max-width: 100%" src={% static 'main/img/blog.jpg' %} class="" alt="...">
+            </div>
+            <div class=" big-cards-text-div ">
+                <p class="big-cards-text-title"> Blog </p>
+                <Button  class="btn" style="background-color: yellow">View Blog</Button>
+            </div>       
+        </div>
+
+        <div class="col-12 col-md-6 big-cards" >
+            <div class="big-cards-image-wrap" >
+                <img class="big-cards-image" style="max-width: 100%" src={% static 'main/img/construction.jpg' %} class="" alt="...">
+            </div>
+            <div class=" big-cards-text-div ">
+                <p class="big-cards-text-title"> Services </p>
+                <Button  class="btn" style="background-color: yellow">View Services</Button>
+            </div>
+        </div>
+
+        
+    </div>
+
+</div>
+</div>
+<div class="container-fluid fifth-vh" >
+    <div class="row empowering" >
+        <div class="big-cards-image-wrap" >
+            <img class="" style="max-width: 100%" src={% static 'main/img/combined-training.jpg' %} class="" alt="...">
+        </div> 
+    </div>
+
+</div>
+
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Eastern Bypass, Cannan Rd</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>0722163791</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>sales@eurofiximdustries.com<br/> info@eurofixindustries.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src={% static 'main/img/LOGO.jpg' %} class="img-fluid" alt="logo"></a>
+                        </div>
+                       
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+{% endblock %}

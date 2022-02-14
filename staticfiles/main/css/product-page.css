@@ -1,0 +1,43 @@
+.product-page-row {
+    margin-top: 3rem;
+}
+
+.product-page-image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.product-page-image img{
+    padding-top: 10%;
+    width:40%;
+    height: auto;
+}
+.product-name{
+    padding-top: 7%;
+    position: relative;
+}
+
+.applications-benefits-row{
+    background: rgba(243, 243, 44, 0.337);
+}
+
+.product-benefits{
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+h3, h5, h4 {
+    color: rgb(255, 174, 0);
+
+}
+
+
+.product-benefits div{
+    align-items: left;
+    text-align: left;
+}
+
+
+

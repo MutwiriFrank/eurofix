@@ -1,0 +1,66 @@
+.filter-container{
+    position:relative;
+    top: 20vh;
+}
+
+.dealers-table{
+    margin-top: 3rem;
+}
+
+/* -------------------About us---------------------- */
+.about-us-hero{
+    height: 60vh;
+    overflow: hidden;
+    
+}
+
+.about-us-hero img{
+    width: 100%;
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.9;
+	object-fit: cover;
+	object-position: center;
+	height: 60%;
+
+}
+
+
+.values-column{
+    height: 320px;
+    margin: 1rem;
+    border-radius: 1rem ;
+    padding: 1rem;
+    background-image: linear-gradient(to bottom right, orange, yellow);
+}
+.values-column p {
+    margin: 0 !important;
+    font-size: 14px;
+}
+
+.values-title{
+    font-size: 1.2rem !important ;
+    font-weight: bold;
+}
+
+@media screen and (max-width:900px) {
+    .about-us-hero{
+        height: 40vh;
+    }
+    .about-us-hero img{
+        height: 40vh !important;
+    }
+
+    .values-column{
+        height: auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px) {
+    
+    
+}
