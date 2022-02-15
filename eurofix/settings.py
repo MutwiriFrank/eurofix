@@ -90,6 +90,7 @@ DATABASES = {
 # }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'] = dj_database_url.config(default='postgres://fuoubbpnnflgfm:6dd2a03672c8d60a00f104e3bcdb5196fb6c84cf476e0eda9a75167d60377ee1@ec2-54-83-21-198.compute-1.amazonaws.com:5432/dcb0ebdbj7urtn')
 DATABASES['default'].update(db_from_env)
 
 
