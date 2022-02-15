@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3!&7pf$7%nn6jb0=w*37xa#n#f3uo0qxnz1xur@f9bt5xga@7s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://eurofix-website.herokuapp.com/", "127.0.0.1", "localhost"]
 
