@@ -1,0 +1,783 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative
+    margin: 0;
+    padding: 0;
+    font-family : sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 50px;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+
+
+header .logo{
+    height: 50px;
+    float: left;
+}
+
+header .logo img{
+    height: 40px;
+}
+
+header nav{
+    float: right;
+}
+
+header nav ul {
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+header nav ul li {
+    list-style: none; 
+    padding: 0 10px; 
+    position: relative;
+}
+
+header nav ul li.sub-menu:before{
+    content: '\f078';
+    font-family: fontawesome;
+    position: absolute; 
+    line-height: 50px;
+    color: black;
+    right : 5px;
+
+}
+
+header nav ul li.active.sub-menu:before{
+    content: '\f077'; 
+    font-family: fontawesome;
+}
+
+header nav ul li ul{
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    background: rgba(243, 243, 44, 0.337);
+    display: none;
+}
+
+header nav ul li ul li:hover{
+    border-bottom: rgb(255, 238, 0) solid 5px;
+    
+}
+
+header nav ul li.active ul{
+
+    display: block;
+}
+
+
+header nav ul li ul li{
+    display: block;
+    width: 270px;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #263238;
+    font-size: 0.9rem;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+
+.menu-toggle {
+    float: right;
+    color: rgb(218, 203, 2);
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.drop{
+    display: none;
+}
+
+.box {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 26em;
+	overflow: hidden;
+}
+.box img {
+    width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.9;
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	
+}
+.hero-text {
+	position: relative;
+    left: 5%;
+    top: 45%;
+	font-weight: bold;
+	font-size: 2em;
+	color: #263238;
+}
+
+
+.first-vh{  
+    margin-top: 60px;
+    background: rgba(243, 243, 44, 0.337);
+}
+
+.strategic-pillars{
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+}
+.pillars{
+    text-align: center;
+}
+
+/* -------------------------Cards-------------------------------- */
+
+.pillars-cards{
+    border-radius: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.pillars-cards img{
+    position: relative;
+    transition: 0.4s;
+    max-width: 100%;
+    height: 260px !important;
+    margin: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.pillars-cards img:hover {
+
+    transform: scale(0.97, 0.97);
+    box-shadow: 2px 3px 5px 3px rgba(0,0,0,0.25), 
+    -2px -2px 5px 3px rgba(0,0,0,0.22);
+}
+
+.pillars-cards div p{
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    height: 20px;
+    color: rgb(255, 174, 0);
+}
+
+/* ------------------------about in home---------------------------- */
+.second-vh{
+    height: 100vh;
+    background: #ffffff;
+    position: relative;
+    
+}
+
+.about-row{
+    position: absolute;
+    top:20%;
+    width: 100%;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.child{
+    width: 100%;
+}
+
+.company-image img{
+    position: relative;
+    width: inherit;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about-us-btn-text{
+    margin: 4px 5px;;
+    font-weight: bold;
+}
+
+.about-us-text-div{
+    margin-top: 1rem;
+    width: 75%;
+}
+
+.about-us-text-div a{
+    color: rgb(158, 158, 25);
+    
+}
+
+.about-us-text-div a i{
+    margin-left: 1rem;
+}
+
+/* -----------------------Sustainability-------------------------- */
+.third-vh{
+    height: 100vh;
+    padding: auto;
+    position: relative;
+    
+}
+.third-vh .sustainability{
+    margin-top: 5rem;
+    display: flex;
+	position: relative;
+	border-radius: 1em;
+	width: 100%;
+	overflow: hidden;
+    height: 85vh;
+    
+}
+.third-vh .sustainability img{
+    width: 100%;
+    height: inherit;
+    border-radius: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.9;
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+
+}
+.third-vh .sustainability div{
+    position: relative;
+    top: 25%;
+    height: 200px !important;
+    padding: 15px;
+    border-radius:10px;
+    width: 40%;
+    height: inherit;
+    z-index: 2;
+    background: transparent;
+}
+.third-vh .sustainability div p{
+
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* -----------------------------big cards---------------------------------- */
+.outer-fourth{
+    background: rgba(243, 243, 44, 0.337);;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
+.big-cards{
+    height: 400px;
+    margin-bottom: 1.7em;
+    position: relative;
+}
+
+.big-cards-image-wrap{
+    width:100%;
+    height: inherit;
+}
+
+.big-cards-image{
+    width: 100%;
+    height: 400px !important;
+}
+
+.big-cards-text-div{
+    position:absolute;
+    top:30%;
+    left: 6%;
+}   
+
+.big-cards-text-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+
+}
+
+.btn-lg:hover{
+    background-color:rgb(158, 158, 25)
+}
+/* --------------------------empowering-------------------------------- */
+.fifth-vh{
+    margin-top: 3rem;
+    height: 95vh;
+}
+.fifth-vh img{
+    height: 95vh;
+    width: 100%;
+}
+
+.sixth-vh{
+    margin-top: 4rem;
+    height: 60vh;
+    background : #fb950688;
+}
+
+/* ----------------------------footer---------------------------------- */
+
+.footer-section {
+    margin-top: 5rem;
+    background: #151414;
+    position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.single-cta i {
+color: #f7de00;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+position: absolute;
+top: 0;
+left: 0;
+height: 330px;
+background-size: cover;
+background-position: 100% 100%;
+}
+.footer-logo {
+margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.facebook-bg{
+background: #3B5998;
+}
+.twitter-bg{
+background: #55ACEE;
+}
+.google-bg{
+background: #DD4B39;
+}
+.footer-widget-heading h3 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading h3::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 50px;
+color: #f7de00;
+}
+.footer-widget ul li {
+display: inline-block;
+float: left;
+width: 50%;
+margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+color: #f7de00;
+}
+.footer-widget ul li a {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+}
+.subscribe-form input {
+width: 100%;
+padding: 14px 28px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #f7de00;
+    padding: 13px 20px;
+    border: 1px solid #f7de00;
+    top: 0;
+}
+.subscribe-form button i {
+color: #fff;
+font-size: 22px;
+transform: rotate(-6deg);
+}
+
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+.footer-menu li:hover a{
+color: #f7de00;
+}
+.footer-menu li a {
+font-size: 14px;
+color: #878787;
+}
+
+
+@media (min-width: 991px)  {
+
+    header nav ul li:hover .nav-titles{
+        color: black;
+    
+    }
+    header nav ul li ul li:hover a{
+        color: black;
+        transform: scale(1.5); 
+    
+    }
+
+
+}
+
+@media (max-width: 991px)  {
+/* -----------------------header---------------------------- */
+    header{
+        padding: 0 20px;
+    }
+    .menu-toggle{
+        display: block;
+    } 
+    header nav{ 
+        position: absolute; 
+        width: 100%; 
+        height: calc(100vh - 60px);
+        background: #fff; 
+        top: 60px;
+        left: 0 ;
+        transition: 0.5s;  
+    }
+    header nav.active{
+        left: -110%;
+    }
+    header nav ul{
+        display: block; 
+        text-align: left;
+    }
+    header nav ul li {    
+        border-bottom: 1px rgb(243, 242, 186) solid; 
+    }
+
+    header nav ul li.active ul{
+        position: relative;
+        background: rgba(243, 243, 44, 0.337);
+    }
+    header nav ul li ul li{
+        width: 100%;
+    }
+    header nav ul li ul li a{
+        margin-left: 6%
+    }
+
+/* -----------------------hero---------------------------- */
+
+    
+    .hero-text {
+        display: none;
+    }
+
+/* ------------------------about in home---------------------------- */
+
+
+    .about-row{
+        position: relative;
+        width: 100%;
+    }
+    .parent{
+        margin-bottom: 1rem;
+    }
+    .about-us-text-div{
+        width: 100%;
+    }
+
+    /* -----------------------sustainability---------------------------- */
+    .third-vh{
+        height: 50vh;
+        
+    }
+    .third-vh .sustainability{
+
+        height: 50vh;
+        
+    }
+    .third-vh .sustainability img{
+
+        border-radius: 13px;
+
+    }
+
+    }
+    @media all and (max-width: 840px) {
+    /* -----------------------hero---------------------------- */
+    .box {
+        height: 24em;
+    }
+
+    .hero-text {
+        top: 93%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .second-vh{
+        margin-top: 3rem;
+        height: auto;
+    }
+
+
+    .about-row{
+        top:0%;
+    }
+
+    .third-vh{
+        margin-bottom: 3em;
+    }
+
+    .third-vh .sustainability div p{
+
+        font-size: 15px;
+    }
+
+    /* -----------------------------big cards---------------------------------- */
+    .outer-fourth{
+        padding-top: 30px;
+    }
+
+    .big-cards{
+        height: 250px;
+        margin-bottom: 1.7em;
+    }
+
+    .big-cards-image{
+        width: 100%;
+        height: 250px !important;
+    }
+
+    .big-cards-text-title{
+        font-size: 25px;
+
+    }
+
+    .fifth-vh{
+        height: 26rem;
+    }
+    .fifth-vh img{
+        height:  26rem;
+    }
+
+    .footer-logo{
+        display: none;
+    }
+
+    .single-cta i {
+        font-size: 23px;
+        float: left;
+        margin-top: 6px;
+        }
+
+    .cta-text {
+    padding-left: 10px;
+    display: inline-block;
+    }
+    .cta-text h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    }
+    .cta-text span {
+    color: #757575;
+    font-size: 12px;
+    }
+
+    
+    .footer-social-icon a {
+    color: #fff;
+    font-size: 13px;
+    margin-right: 13px;
+    }
+    .footer-social-icon i {
+    height: 30px;
+    width:  30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    } 
+}
+
+@media all and (max-width: 500px) {
+
+    .box {
+        height: 15em;
+    }
+
+    .pillars-cards{
+        border-radius: 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        margin: 30px auto;
+    }
+    
+    .pillars-cards img{
+        position: relative;
+        transition: 0.4s;
+        max-width: 100%;
+        height: 150px !important;
+        margin: 0 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        object-fit: cover;
+    }
+    
+
+    /* ---------------------------------------cards-------------------------------------------- */
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+
+    /* ---------------------------------sustainability------------------------------------------ */
+
+    .big-cards{
+        height: 200px;
+        margin-bottom: 1.5em;
+    }
+
+    .big-cards-image{
+        width: 100%;
+        height: 200px !important;
+    }
+
+
+    .third-vh .sustainability div{
+        width: 100%;
+    }
+
+    third-vh .sustainability div p{
+
+        font-size: 15px;    
+    }
+    
+    .fifth-vh{
+        height: 12rem;
+    }
+    .fifth-vh img{
+        height:  12rem;
+    }
+
+    .cta-text {
+    padding-left: 10px;
+    display: inline-block;
+    }
+    .cta-text h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    }
+    .cta-text span {
+    color: #757575;
+    font-size: 12px;
+    }
+
+    .footer-widget-heading{
+        margin-top: 2rem;
+    }
+
+    .footer-widget-heading h3{
+        font-size: 15px;
+        line-height: 15px;
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+
+

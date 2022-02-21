@@ -2,9 +2,50 @@
 {% load static %}
 
 {% block content %}
-    <div class="box">
-        <img src = {% static 'main/img/tile-applications.jpg' %} alt="Tile cements">
-    </div>
+
+
+    {% if category.name == 'Tile Applications' %}
+
+
+        <div class="box">
+            <img src = {% static 'main/img/tile-applications.jpg' %} alt="Tile cements">
+        </div>
+
+    {% endif %}
+    {% if category.name == 'Waterproofing' %}
+
+
+        <div class="box">
+            <img src = {% static 'main/img/waterproof.jpg' %} alt="water">
+        </div>
+
+    {% endif %}
+
+    {% if category.name == 'Finishing and Decorations' %}
+
+
+        <div class="box">
+            <img src = {% static 'main/img/finishing.jpg' %} alt="wall painted yellow">
+        </div>
+
+    {% endif %}
+
+    {% if category.name == 'Cement' %}
+
+        <div class="box">
+            <img src = {% static 'main/img/cement2.jpg' %} alt=" cement mortar">
+        </div>
+
+    {% endif %}
+
+    {% if category.name == 'Bricks & Cabros' %}
+
+
+        <div class="box">
+            <img src = {% static 'main/img/cabros.jpg' %} alt="Paving blocks">
+        </div>
+
+    {% endif %}
 
     <div class="container categories-div">
         <h3>{{ category.name }}</h3>
