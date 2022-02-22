@@ -507,6 +507,14 @@ color: #878787;
 }
 
 
+.whatsapp{
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 10;
+    position: fixed;
+    
+}
+
 @media (min-width: 991px)  {
 
     header nav ul li:hover .nav-titles{
