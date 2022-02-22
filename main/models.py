@@ -58,9 +58,9 @@ class Dealers(models.Model):
         return f"{self.hardware_name} - {self.dealer_name} "
 
 
-
-
-
-
+class Subscribers_Email(models.Model):
+    email = models.EmailField(null=True, blank=True)
+    def __str__(self):
+        return self.email
 
 

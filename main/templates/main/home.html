@@ -17,44 +17,70 @@
     <div class="container-fluid  container-cards">
         <div class="row">
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%" src={% static 'main/img/laying-white-Tile.jpg' %} class="" alt="...">
+                <a href="/tile-applications"> <img style="max-width: 100%" src={% static 'main/img/laying-white-Tile.jpg' %} class="" alt="..."/>  </a>
+               
                 <div >
-                    <p class="card-text">Tile Cements </p>
+                    <a href="/tile-applications"> <p class="card-text">Tile Cements </p>
+                    </a>
+
                 </div>
             </div>
 
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%" src={% static 'main/img/water-tank.jpg' %} class="" alt="...">
+            
+                <a href="/waterproofing">
+
+                    <img style="max-width: 100%" src={% static 'main/img/water-tank.jpg' %} class="" alt="...">
+                </a>
                 <div >
-                    <p class="card-text">Waterproofing </p>
+                    <a href="/waterproofing">
+
+                        <p class="card-text">Waterproofing </p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%" src={% static 'main/img/yellow-wall.jpeg' %} class="" alt="...">
-                <div >
-                    <p class="card-text">Finishing & Decorations </p>
+                <a href="/finishing-and-decorations">
+                    <img style="max-width: 100%" src={% static 'main/img/yellow-wall.jpeg' %} class="" alt="...">
+                </a>
+                    <div >
+                    <a href="/finishing-and-decorations">
+                        <p class="card-text">Finishing & Decorations </p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%" src={% static 'main/img/cement.jpg' %} class="" alt="...">
-                <div >
-                    <p class="card-text">Ready to Use Cement </p>
+                <a href="/cement">
+                    <img style="max-width: 100%" src={% static 'main/img/cement.jpg' %} class="" alt="...">
+                </a>
+                    <div >
+                    <a href="/cement">
+                        <p class="card-text">Ready to Use Cement </p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%" src={% static 'main/img/blocks.jpg' %} class="" alt="...">
+                <a href="/bricks-and-cabros">
+                    <img style="max-width: 100%" src={% static 'main/img/blocks.jpg' %} class="" alt="...">
+                </a>
                 <div >
-                    <p class="card-text">Cabros & Blocks </p>
+                    <a href="/bricks-and-cabros">
+                        <p class="card-text">Cabros & Blocks </p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-6 col-md-6 col-lg-4 pillars-cards" >
-                <img style="max-width: 100%; height: inherit" src={% static 'main/img/construction_chemicals.jpg' %} class="" alt="...">
-                <div >
-                    <p class="card-text">Construction Chemicals </p>
+                <a href="/construction-chemicals">
+                    <img style="max-width: 100%; height: inherit" src={% static 'main/img/construction_chemicals.jpg' %} class="" alt="...">
+                </a>
+                    <div >
+                    <a href="/construction-chemicals">
+                        p class="card-text">Construction Chemicals </p>
+                    </a>
                 </div>
             </div>
             
@@ -76,7 +102,7 @@
                         Cabro and Construction Chemicals.
 
                     </p>
-                    <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+                    <a href="/about">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
             </div>
@@ -119,9 +145,10 @@
             <div class=" big-cards-text-div ">
                 <p class="big-cards-text-title"> 15 Products </p>
                 <!-- <p class="big-cards-text" >Discover all our products for all kinds of construction needs</p> -->
+                <a href="all-products" >
+                    <Button class="btn " style="background-color: yellow"  >View Products</Button>
+                </a>
 
-                <Button class="btn " style="background-color: yellow">View Products</Button>
-                
             </div>       
         </div>
 
@@ -132,7 +159,9 @@
             <div class=" big-cards-text-div ">
                 <p class="big-cards-text-title"> Dealers </p>
                 <!-- <p class="big-cards-text">We have a large dealer netork covering nationalwide</p> -->
-                <button class="btn  big-cards-button" style="background-color: yellow ">View Dealers</button>
+                <a href=" {% url 'dealers' %} ">
+                    <button class="btn  big-cards-button" style="background-color: yellow ">View Dealers</button>
+                    </a>
             </div>
         </div>
         <div class="col-12 col-md-6  big-cards" >
@@ -209,8 +238,7 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html"><img src={% static 'main/img/LOGO.jpg' %} class="img-fluid" alt="logo"></a>
-                        </div>
-                       
+                        </div>                      
                         <div class="footer-social-icon">
                             <span>Follow us</span>
                             <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
@@ -229,10 +257,22 @@
                             <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                         </div>
                         <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="fab fa-telegram-plane"></i></button>
+                            <form method="post" action="{% url 'subscription' %}">
+                                {% csrf_token %}
+                                <input type="email" name="email"" placeholder="Email Address">
+                                <button type="submit">Submit<i class="fab fa-telegram-plane"></i></button>
                             </form>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                <div class="my-5 alert alert-success">
+                                    <h5 class="m-0">
+                                        {{ message }}
+                                    </h5>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>

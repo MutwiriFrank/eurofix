@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     #thirt party
     'django_filters',
     'crispy_forms',
+    'import_export',
     
     # my apps
     'main',
