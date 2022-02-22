@@ -154,16 +154,13 @@
                 </div>
             </div>
         </div>
-        
-
         <div class="footer-content pt-5 pb-5">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html"><img src={% static 'main/img/LOGO.jpg' %} class="img-fluid" alt="logo"></a>
-                        </div>
-                       
+                        </div>                      
                         <div class="footer-social-icon">
                             <span>Follow us</span>
                             <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
@@ -182,10 +179,22 @@
                             <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                         </div>
                         <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="fab fa-telegram-plane"></i></button>
+                            <form method="post" action="{% url 'subscription' %}">
+                                {% csrf_token %}
+                                <input type="email" name="email"" placeholder="Email Address">
+                                <button type="submit">Submit<i class="fab fa-telegram-plane"></i></button>
                             </form>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                <div class="my-5 alert alert-success">
+                                    <h5 class="m-0">
+                                        {{ message }}
+                                    </h5>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
