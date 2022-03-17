@@ -12,6 +12,11 @@
     <link href="{% static 'main/css/category.css' %}" rel = "stylesheet" /> 
     <link href="{% static 'main/css/product-page.css' %}" rel = "stylesheet" />  
     <link href="{% static 'main/css/restpages.css' %}" rel = "stylesheet" />
+    <link href="{% static 'main/css/gallery.css' %}" rel = "stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
     <title>Eurofix Industries</title>
 </head> 
@@ -38,7 +43,7 @@
                 </li>
           
                 <li><a class="nav-titles" href="/about">About Us</a> </li>
-                <!-- <li><a class="nav-titles" href="">Blog</a> </li> -->
+                <li><a class="nav-titles" href="/gallery">Gallery</a> </li>
                 <li><a class="nav-titles" href=" {% url 'dealers' %} ">Find Dealer</a> </li>
             </ul>
         </nav>

@@ -706,6 +706,10 @@ color: #878787;
 }
 
 @media all and (max-width: 500px) {
+    header .logo img{
+        height: 30px;
+        margin-top:10px;
+    }
 
     .box {
         height: 15em;

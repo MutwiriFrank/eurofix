@@ -69,6 +69,11 @@ def dealers_page(request):
 def about(request):
     return render(request, 'main/about.html')
 
+
+def gallery(request):
+    return render(request, 'main/gallery.html')
+
+
 def subscription(request):
     if request.method == 'POST':
         email = request.POST['email']

@@ -1,0 +1,158 @@
+
+{% extends "./base.html" %}  
+{% load static %}
+
+{% block content %}
+
+
+<input class="gallery-input" type="radio" name="photos" id="check1" checked />
+<input class="gallery-input" type="radio" name="photos" id="check2"  />
+<input class="gallery-input" type="radio" name="photos" id="check3"  />
+<input class="gallery-input" type="radio" name="photos" id="check4"  />
+<div class="gallery-container">
+    <h1 class="h1-gallery" >Our Photo Gallery</h1>
+    <div class="  top-gallery-content" >
+        <div class="container" >
+            <div class="row"  >
+                <div class="col" >
+                    <label class="gallery-label" for="check1" >All Photos</label>
+                </div>
+                <div class="col" >
+                    <label class="gallery-label" for="check2" >Training </label>
+                </div>
+                <div class="col" >
+                    <label class="gallery-label" for="check3" >Works</label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        <div class="row photo-gallery" >
+
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/1.png' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/3.jpg' %}" >
+    
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/6.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/9.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/10.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/11.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/12.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/13.jpg' %}" >
+
+</div>
+<div class="col-12 col-md-4 col-lg-3 pic training px-0" >
+    <img src="{% static 'main/img/14.jpg' %}" >
+
+</div>
+            <div class="col-12 col-md-4 col-lg-3 pic training  px-0" >
+                
+                    <img src="{% static 'main/img/16.jpg' %}" >
+                
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic works  px-0 " >
+                
+                    <img src="{% static 'main/img/17.jpg' %}" >               
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic works  px-0 " >               
+                    <img src="{% static 'main/img/18.jpg' %}" >            
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic training  px-0" >
+                <img src="{% static 'main/img/19.jpg' %}" >
+            
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic training  px-0" >
+                
+                    <img src="{% static 'main/img/training2.jpg' %}" >
+                
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic works  px-0 " >
+                
+                    <img src="{% static 'main/img/20.jpg' %}" >               
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 pic works  px-0 " >               
+                    <img src="{% static 'main/img/training4.jpg' %}" >            
+            </div>       
+
+        </div>
+
+    </div>
+<!-- 
+    <div class="photo-gallery" >
+        <div class="pic training" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic training" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training2.jpg' %}" >
+        </div>
+        <div class="pic works" >
+            <img src="{% static 'main/img/training4.jpg' %}" >
+        </div>
+
+    </div> -->
+    
+
+</div>
+
+
+{% endblock content %}
